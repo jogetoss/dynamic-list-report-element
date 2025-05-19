@@ -1,7 +1,7 @@
 # Description
 
 The Dynamic List Report Element Plugin is used to generate dynamic list without creating multiple reports, it includes
-- Dynamic List Report Builder
+- Dynamic List Report Element
 - Dynamic List Download Report Datalist Action
 
 ## Dynamic List Report Builder
