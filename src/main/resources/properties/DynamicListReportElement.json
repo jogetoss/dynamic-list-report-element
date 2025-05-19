@@ -1,0 +1,256 @@
+[
+    {
+        "title": "@@report.dynamiclist.edit@@",
+        "properties": [
+            {
+                "name": "id",
+                "label": "ID",
+                "type": "Readonly",
+                "prefix" : "e_"
+            },
+            {
+                "name": "selectorClass",
+                "label": "@@report.dynamiclist.selectorClass@@",
+                "type": "textfield"
+            },
+            {
+                "name": "datalistId",
+                "label": "@@userview.datalistmenu.listId@@",
+                "type": "textfield",
+                "required": "True"
+            },
+            {
+                "name": "headerColor",
+                "label": "@@report.dynamiclist.headerColor@@",
+                "type": "color"
+            },
+            {
+                "name": "headerTextColor",
+                "label": "@@report.dynamiclist.headerTextColor@@",
+                "type": "color"
+            }
+        ]
+    },	
+    {
+        "title": "@@form.listgrid.advanced@@",
+        "properties": [
+            {
+                "name": "automatedNum",
+                "label": "@@report.dynamiclist.showNumbering@@",
+                "type": "checkbox",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            },
+            {
+                "name": "filterParams",
+                "label": "@@report.dynamiclist.filterParams@@",
+                "type": "grid",
+                "columns": [
+                    {
+                        "key": "param",
+                        "label": "@@report.dynamiclist.filterParamName@@",
+                        "required": "True",
+                        "type": "autocomplete",
+                        "options_ajax_on_change": "datalistId",
+                        "options_ajax": "[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.rbuilder.lib.ListReportElement/service?action=events"
+                    },
+                    {
+                        "key": "value",
+                        "label": "@@report.dynamiclist.filterParamValue@@"
+                    }
+                ]
+            },
+            {
+                "name": "formulaColumns",
+                "label": "@@report.dynamiclist.formulaColumns@@",
+                "description": "@@report.dynamiclist.formulaColumns.desc@@",
+                "type": "grid",
+                "columns": [
+                    {
+                        "key": "label",
+                        "label": "@@report.dynamiclist.formulaColumns.label@@",
+                        "required": "True"
+                    },
+                    {
+                        "key": "formula",
+                        "label": "@@report.dynamiclist.formulaColumns.formula@@",
+                        "required": "True"
+                    },
+                    {
+                        "key": "footer",
+                        "label": "@@report.dynamiclist.footer@@",
+                        "options": [
+                            {
+                                "value": "",
+                                "label": ""
+                            },
+                            {
+                                "value": "Sum",
+                                "label": "@@report.dynamiclist.calculation.Sum@@"
+                            },
+                            {
+                                "value": "Average",
+                                "label": "@@report.dynamiclist.calculation.Average@@"
+                            },
+                            {
+                                "value": "Count",
+                                "label": "@@report.dynamiclist.calculation.Count@@"
+                            },
+                            {
+                                "value": "DistinctCount",
+                                "label": "@@report.dynamiclist.calculation.DistinctCount@@"
+                            },
+                            {
+                                "value": "First",
+                                "label": "@@report.dynamiclist.calculation.First@@"
+                            },
+                            {
+                                "value": "Highest",
+                                "label": "@@report.dynamiclist.calculation.Highest@@"
+                            },
+                            {
+                                "value": "Lowest",
+                                "label": "@@report.dynamiclist.calculation.Lowest@@"
+                            },
+                            {
+                                "value": "StandardDeviation",
+                                "label": "@@report.dynamiclist.calculation.StandardDeviation@@"
+                            },
+                            {
+                                "value": "Variance",
+                                "label": "@@report.dynamiclist.calculation.Variance@@"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "numberFormat",
+                        "label": "@@report.dynamiclist.numberFormat@@"
+                    },
+                    {
+                        "key": "headerAlignment",
+                        "label": "@@dbuilder.headerAlignment@@",
+                        "options": [
+                            {
+                                "value": "dataListAlignLeft",
+                                "label": "@@report.align.left@@"
+                            },
+                            {
+                                "value": "dataListAlignCenter",
+                                "label": "@@report.align.center@@"
+                            },
+                            {
+                                "value": "dataListAlignRigth",
+                                "label": "@@report.align.right@@"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "alignment",
+                        "label": "@@report.align@@",
+                        "options": [
+                            {
+                                "value": "dataListAlignLeft",
+                                "label": "@@report.align.left@@"
+                            },
+                            {
+                                "value": "dataListAlignCenter",
+                                "label": "@@report.align.center@@"
+                            },
+                            {
+                                "value": "dataListAlignRigth",
+                                "label": "@@report.align.right@@"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "width",
+                        "label": "@@report.dynamiclist.formulaColumns.width@@"
+                    }
+                ]
+            },
+            {
+                "name": "footer",
+                "label": "@@report.dynamiclist.footer@@",
+                "description": "@@report.dynamiclist.footer.description@@",
+                "type": "grid",
+                "columns": [
+                    {
+                        "key": "footerlabel",
+                        "label": "@@report.dynamiclist.footer.footerlabel@@"
+                    },
+                    {
+                        "key": "fieldid",
+                        "label": "@@report.dynamiclist.footer.fieldid@@",
+                        "required": "True"
+                    },
+                    {
+                        "key": "operator",
+                        "label": "@@report.dynamiclist.footer.operator@@",
+                        "options": [
+                            {
+                                "value": "Sum",
+                                "label": "@@report.dynamiclist.calculation.Sum@@"
+                            },
+                            {
+                                "value": "Average",
+                                "label": "@@report.dynamiclist.calculation.Average@@"
+                            },
+                            {
+                                "value": "Count",
+                                "label": "@@report.dynamiclist.calculation.Count@@"
+                            },
+                            {
+                                "value": "DistinctCount",
+                                "label": "@@report.dynamiclist.calculation.DistinctCount@@"
+                            },
+                            {
+                                "value": "First",
+                                "label": "@@report.dynamiclist.calculation.First@@"
+                            },
+                            {
+                                "value": "Highest",
+                                "label": "@@report.dynamiclist.calculation.Highest@@"
+                            },
+                            {
+                                "value": "Lowest",
+                                "label": "@@report.dynamiclist.calculation.Lowest@@"
+                            },
+                            {
+                                "value": "StandardDeviation",
+                                "label": "@@report.dynamiclist.calculation.StandardDeviation@@"
+                            },
+                            {
+                                "value": "Variance",
+                                "label": "@@report.dynamiclist.calculation.Variance@@"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "numberFormat",
+                        "label": "@@report.dynamiclist.numberFormat@@"
+                    }
+                ]
+            },
+            {
+                "name": "footerRowlabel",
+                "label": "@@report.dynamiclist.footerRowlabel@@",
+                "type": "textfield"
+            },
+            {
+                "name": "repeatFooterRowEveryPage",
+                "label": "@@report.dynamiclist.repeatFooterRowEveryPage@@",
+                "type": "checkbox",
+                "options": [
+                    {
+                        "value": "true",
+                        "label": ""
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,66 @@
+[
+   {
+      "title": "@@datalist.dynamicListDownloadReport.config@@",
+      "properties": [
+         {
+            "name": "label",
+            "label": "@@datalist.dynamicListDownloadReport.label@@",
+            "type": "textfield",
+            "value": "@@DynamicListDownloadReportDatalistAction.label@@"
+         },
+         {
+            "name": "reportId",
+            "label": "@@datalist.dynamicListDownloadReport.report@@",
+            "type": "selectbox",
+            "required": "True",
+            "options_ajax": "[CONTEXT_PATH]/web/json/console/app[APP_PATH]/cbuilder/report/options"
+         },
+         {
+            "name": "reportParams",
+            "label": "@@report.subreport.reportParams@@",
+            "type": "grid",
+            "columns": [
+               {
+                  "key": "param",
+                  "label": "@@report.subreport.paramName@@",
+                  "required": "True"
+               },
+               {
+                  "key": "value",
+                  "label": "@@report.subreport.paramValue@@",
+                  "options_callback": "DatalistBuilder.getColumnOptions"
+               }
+            ]
+         },
+         {
+            "name": "confirmation",
+            "label": "@@datalist.dynamicListDownloadReport.confirmationMessage@@",
+            "type": "textfield"
+         },
+         {
+            "name": "renameFile",
+            "label": "@@datalist.dynamicListDownloadReport.renameFile@@",
+            "type": "selectbox",
+            "options": [
+               {
+                  "value": "false",
+                  "label": "@@datalist.dynamicListDownloadReport.no@@"
+               },
+               {
+                  "value": "true",
+                  "label": "@@datalist.dynamicListDownloadReport.yes@@"
+               }
+            ],
+            "required": "True"
+         },
+         {
+            "name": "filename",
+            "label": "@@datalist.dynamicListDownloadReport.filename@@",
+            "control_field": "renameFile",
+            "control_value": "true",
+            "type": "textfield",
+            "description": "@@datalist.dynamicListDownloadReport.filename.desc@@"
+         }
+      ]
+   }
+]

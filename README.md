@@ -1,6 +1,15 @@
 # Description
 
-This repository is meant to serve as a general template for how to set up new repositories in the JogetOSS organization. 
+The Dynamic List Report Element Plugin is used to generate dynamic list without creating multiple reports, it includes
+- Dynamic List Report Builder
+- Dynamic List Download Report Datalist Action
+
+## Dynamic List Report Builder
+Drag the report element into the report, and configure "List" with "#reportParam.datalistId#". This value is passed from the Dynamic List Download Report Datalist Action.
+
+## Dynamic List Download Report Datalist Action
+In a datalist, drag the datalist action element into the list. This button will pass the datalist ID in the backend without any extra configurations.
+
 
 # Getting Help
 
