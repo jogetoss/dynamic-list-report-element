@@ -171,6 +171,7 @@ public class DynamicListDownloadReportDatalistAction extends DataListActionDefau
         Map<String, String> rparams = new HashMap<String, String>();
         rparams.put("id", id);
         rparams.put("datalistId", dataList.getId());
+        rparams.put("datalistName", dataList.getName());
 
         if (builderDefinition != null) {
             json = builderDefinition.getJson();
