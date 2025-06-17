@@ -6,6 +6,7 @@ The Dynamic List Report Element Plugin is used to generate dynamic list without 
 
 ## Dynamic List Report Builder
 Drag the report element into the report, and configure "List" with "#reportParam.datalistId#". This value is passed from the Dynamic List Download Report Datalist Action.
+You can also use "#reportParam.datalistName# to retrieve the name to pass into text field or any desired fields.
 
 ## Dynamic List Download Report Datalist Action
 In a datalist, drag the datalist action element into the list. This button will pass the datalist ID in the backend without any extra configurations.
